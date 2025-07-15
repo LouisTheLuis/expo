@@ -241,6 +241,7 @@
       name:    "cpu_dump",
       act:     "rcv",
       package: "rv_core_ibex_pkg",
+      default: " ",
       desc:    '''
         Main processing element crash dump information.
       '''

@@ -4341,8 +4341,8 @@
           type: uni
           act: rcv
           width: 1
+          default: " "
           inst_name: rstmgr_aon
-          default: ""
           top_signame: rv_core_ibex_crash_dump
           index: -1
         }
@@ -21348,8 +21348,8 @@
         type: uni
         act: rcv
         width: 1
+        default: " "
         inst_name: rstmgr_aon
-        default: ""
         top_signame: rv_core_ibex_crash_dump
         index: -1
       }

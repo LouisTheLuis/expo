@@ -621,8 +621,10 @@ def _get_rstmgr_params(top: ConfigT) -> ParamsT:
     n_rstreqs = len(top["reset_requests"]["peripheral"])
 
     # Will connect to alert_handler
-    with_alert_handler = lib.find_module(top['module'],
+    has_ibex = lib.find_module(top["module"], 'rv_core_ibex') is not None
+    has_alert_handler = lib.find_module(top['module'],
                                          'alert_handler') is not None
+    with_alert_handler = has_ibex and has_alert_handler
 
     return {
         "clk_freqs": clk_freqs,
